@@ -1,0 +1,72 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(28, 67, 111);
+    background-image: url("accueilpic.jpg");
+}
+body img{
+    transition: transform 0.5s;
+}
+body img:hover{
+    -ms-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+}
+.navbar {
+    display: flex;
+    width: 100vw;
+    background-color: #7e0054ee;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+.navlinks li a {
+    font-size: 0.8rem;
+    color: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    transition: 0.3s;
+}
+.navlinks {
+    display: flex;
+}
+.menu a {
+    margin: 70px;
+    position: relative;
+    color: #ffffff;
+    font-size: 1 rem;
+    font-family: "poppins-semibold";
+    align-items: center;
+}
+.menu{
+    transition: transform 0.5s;
+}
+.menu:hover{
+    -ms-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+}
+.burger {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    right: 30px;
+    display: none;
+}
+.central img{
+    display: flex;
+    align-items: baseline;
+    flex-direction: row;
+    padding: 20px;
+    justify-content: space-evenly;
+    width: 400px;
+    margin: auto;
+}
