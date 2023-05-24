@@ -1,0 +1,145 @@
+/* Reset CSS */
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, sans-serif;
+    color: white;
+    box-sizing: border-box;
+}
+body{
+    background-color: #9553F1;
+    color: white;
+}
+nav{
+    width: 100%;
+    margin: 0 auto;
+    background-color: #7E4BDE;
+    position: sticky;
+    top: 0px;
+}
+nav ul{
+    list-style-type: none; /*enleve les puces devant nos éléments de liste*/
+}
+nav li{
+    float: left; /*met nos éléments de liste sur la même ligne*/
+    /* display : inline-block;  créer par défaut un espace entre les élements */
+    width: 25%;
+    text-align: center;
+}
+nav ul li{
+    float: left;
+    width: 25%;
+    text-align: center;
+    position: relative;
+}
+nav > ul li:hover .sous{
+    display: block;
+}
+nav ul ::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+nav a{
+    display: block;
+    text-decoration: none;
+    color: black;
+    border-bottom: solid 2px transparent;
+    padding: 10px 0px;
+}
+nav a:hover{
+    color: orange;
+    border-bottom: solid 2px gold;
+}
+div img{
+    max-width: 25%;
+    margin: 2%;
+}
+img {
+    padding: 20px;
+    border-radius: 15px;
+    margin: 0 auto;
+    opacity: 0.5;
+}
+
+.zoom{
+    transition: transform 0.3s;
+}
+.zoom:hover{
+    transform: scale(1.2) rotate(10deg);
+    opacity: 1;
+
+}
+
+article{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+/* LES CLASSES */
+.sous{
+    display: none;
+    box-shadow: 0px 1px 2px #ccc;
+    background-color: white;
+    position: absolute;
+    width: 100%;
+    z-index: 1000;
+}
+.sous li{
+    float: none;
+    width: 100%;
+    text-align: left;
+}
+.sous a{
+    padding: 10px;
+    border-bottom: none;
+}
+.sous a:hover{
+    border-bottom: none;
+    background-color: rgba(200,200,200,0.1);
+}
+
+.deroulant > a::after{
+    content: " ▼";
+    font-size: 15px;
+}
+.flip-box {
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #f1f1f1;
+    perspective: 1000px;
+  }
+  
+.flip-box-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.3s;
+    transform-style: preserve-3d;
+  }
+  
+.flip-box:hover .flip-box-inner {
+    transform: rotateY(180deg);
+  }
+  
+.flip-box-front, .flip-box-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  
+/* .flip-box-front { */
+    /* background-color: #bbb; */
+    /* color: black; */
+  /* } */
+  
+.flip-box-back {
+    background-color: dodgerblue;
+    color: white;
+    transform: rotateY(180deg);
+  }
